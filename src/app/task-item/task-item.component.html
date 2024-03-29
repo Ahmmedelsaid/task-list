@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="task-item" (click)="toggleCompletion()">
+    <div class="task-title">
+      <h1>Task Title</h1>
+      <span>
+        {{ tasks.title}}
+      </span>
+    </div>
+    <div
+      class="task-status"
+      [ngClass]="{ completed: tasks.completed, uncomplete: !tasks.completed }"
+    >
+      {{ tasks.completed ? "Completed" : "Uncompleted" }}
+    </div>
+  </div>
+</div>
